@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green"
+    tools:layout_editor_absoluteX="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:fillViewport="false"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_green"
+                tools:context=".medicine.AddMedicineActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <!-- CARD VIEW FOR MEDICINE NAME -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="83dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/med"
+                                android:textColor="@color/brown"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_med_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/input_med_name"
+                                android:minHeight="20dp"
+                                android:textColor="@color/grey"
+                                android:textColorHighlight="#FFFFFF"
+                                android:textColorHint="#FFFFFF"
+                                android:textColorLink="#FBFBFB"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textSize="14sp"
+                                app:backgroundTint="@color/dark_green"
+                                tools:ignore="TextContrastCheck" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!--  CARD VIEW FOR BEGIN AND END DATE PICKER  -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:textSize="15sp">
+
+                            <TextView
+                                android:id="@+id/schedule_v"
+                                android:layout_width="83dp"
+                                android:layout_height="wrap_content"
+                                android:text="@string/schedule"
+                                android:textColor="@color/brown"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/beginDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/begin_dt"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/end_Date"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/end_dt"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- CARD VIEW WITH THE BUTTONS TO PICK THE HOUR OF MEDICINE -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+
+                        <LinearLayout
+                            android:id="@+id/alarms"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/reminders"
+                                android:textColor="@color/brown"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+
+                            <Spinner
+                                android:id="@+id/spinnerAlarms"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:background="@android:drawable/btn_dropdown"
+                                android:backgroundTint="@color/orange"
+                                android:backgroundTintMode="@color/orange"
+                                android:spinnerMode="dropdown"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/timeButton1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/input_time"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/timeButton2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/input_time"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal">
+
+                                <Button
+                                    android:id="@+id/timeButton3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/input_time"
+                                    android:textSize="14sp" />
+
+                                <Button
+                                    android:id="@+id/timeButton4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginStart="10dp"
+                                    android:backgroundTint="@color/orange"
+                                    android:text="@string/input_time"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- CARD VIEW FOR SELECT THE DAYS OF THE WEEK -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="@string/input_days"
+                                android:textColor="@color/brown"
+                                android:textColorHighlight="#EF8A17"
+                                android:textColorLink="#EF8A17"
+                                android:textSize="18dp"
+                                android:textStyle="bold" />
+
+
+                            <CheckBox
+                                android:id="@+id/dv_every_day"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/orange"
+                                android:text="@string/everyDay"
+                                android:textColor="@color/white" />
+
+                            <LinearLayout
+                                android:id="@+id/checkbox_layout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="7">
+
+                                <CheckBox
+                                    android:id="@+id/dv_sunday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="S"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_monday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="M"
+                                    android:textColor="@color/white" />
+
+
+                                <CheckBox
+                                    android:id="@+id/dv_tuesday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_wednesday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="W"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_thursday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_friday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="F"
+                                    android:textColor="@color/white" />
+
+
+                                <CheckBox
+                                    android:id="@+id/dv_saturday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:gravity="center"
+                                    android:text="S"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- CARD VIEW FOR ADDITIONAL NOTES -->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical"
+                            android:textSize="15sp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/notes"
+                                android:textColor="@color/brown"
+                                android:textSize="18sp"
+                                android:textStyle="bold" />
+
+                            <EditText
+                                android:id="@+id/input_notes"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/notesDesc"
+                                android:textColor="@color/grey"
+                                android:textColorHighlight="#FFFFFF"
+                                android:textColorHint="#FFFFFF"
+                                android:textColorLink="#FBFBFB"
+                                android:textCursorDrawable="@drawable/cursor"
+                                android:textSize="15sp"
+                                app:backgroundTint="@color/dark_green"
+                                tools:ignore="TextContrastCheck" />
+
+                        </LinearLayout>
+
+
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- CARD VIEW FOR ADD AND CANCEL -->
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="20dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal"
+                        android:textSize="15sp">
+
+                        <Button
+                            android:id="@+id/cancelMedicine"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/salmon"
+                            android:text="@string/cancel"
+                            app:icon="@android:drawable/ic_input_delete" />
+
+                        <Button
+                            android:id="@+id/addMedicine"
+                            style="@style/Widget.MaterialComponents.Button.Icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:backgroundTint="@color/pastel_green"
+                            android:text="@string/add"
+                            app:icon="@android:drawable/ic_input_add" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="false"
+        android:windowTranslucentNavigation="true"
+        android:windowTranslucentStatus="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

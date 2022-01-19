@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/dark_green"
+    tools:layout_editor_absoluteX="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/dark_green"
+            android:fillViewport="false"
+            android:orientation="vertical">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/dark_green"
+                android:layout_gravity="center_vertical"
+                tools:context=".medicine.AddMedicineActivity">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_margin="8dp"
+                    android:orientation="vertical"
+                    tools:ignore="MissingConstraints">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        app:cardBackgroundColor="@color/green"
+                        app:cardCornerRadius="4dp"
+                        app:cardElevation="2dp"
+                        app:cardUseCompatPadding="true"
+                        app:contentPadding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints">
+
+
+                            <TextView
+                                android:id="@+id/medName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_margin="7dp"
+                                android:textAlignment="center"
+                                android:textColor="@color/brown"
+                                android:textSize="25sp"
+                                android:textStyle="bold" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="3dp"
+                                android:layout_margin="5dp"
+                                android:background="@color/dark_green" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:text="Notes"
+                                android:textColor="@color/brown"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="8dp"
+                                android:orientation="vertical"
+                                tools:ignore="MissingConstraints">
+
+                                <TextView
+                                    android:id="@+id/medNotes"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_marginStart="5sp"
+                                    android:layout_marginTop="7sp"
+                                    android:layout_marginEnd="5sp"
+                                    android:gravity="center"
+                                    android:text="@string/specific_notes_relative_to_the_medication"
+                                    android:textAlignment="center"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/white"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_margin="5dp"
+                                android:background="@color/dark_green"
+                                android:visibility="invisible" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:text="@string/schedule"
+                                android:textColor="@color/brown"
+                                android:textSize="20sp"
+                                android:textStyle="bold" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_margin="8dp"
+                            android:orientation="vertical"
+                            tools:ignore="MissingConstraints">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:text="Begin Date: "
+                                android:textColor="@color/brown"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/beginDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:text="End Date"
+                                android:textColor="@color/brown"
+                                android:textSize="18sp" />
+
+
+                            <TextView
+                                android:id="@+id/endDate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginStart="5sp"
+                                android:layout_marginTop="7sp"
+                                android:layout_marginEnd="5sp"
+                                android:textColor="@color/white"
+                                android:textSize="16sp" />
+
+
+                        </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_margin="8dp"
+                                android:orientation="horizontal"
+                                tools:ignore="MissingConstraints">
+
+
+                                <CheckBox
+                                    android:id="@+id/dv_sunday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="S"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_monday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="M"
+                                    android:textColor="@color/white" />
+
+
+                                <CheckBox
+                                    android:id="@+id/dv_tuesday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_wednesday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="W"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_thursday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="T"
+                                    android:textColor="@color/white" />
+
+                                <CheckBox
+                                    android:id="@+id/dv_friday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="F"
+                                    android:textColor="@color/white" />
+
+
+                                <CheckBox
+                                    android:id="@+id/dv_saturday"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_margin="4dp"
+                                    android:layout_weight="1"
+                                    android:background="@drawable/dayview"
+                                    android:button="@null"
+                                    android:clickable="false"
+                                    android:gravity="center"
+                                    android:text="S"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="false"
+        android:windowTranslucentNavigation="true"
+        android:windowTranslucentStatus="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer" />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

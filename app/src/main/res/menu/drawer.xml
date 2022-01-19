@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_med"
+            android:title="@string/menu_medicines"/>
+        <item
+            android:id="@+id/nav_addMed"
+            android:title="@string/menu_addMed"/>
+        <item
+            android:id="@+id/nav_dependants"
+            android:title="@string/menu_dependants" />
+        <!--<item
+            android:id="@+id/nav_add_dependant"
+            android:title="@string/menu_addDependant" />-->
+        <item
+            android:id="@+id/nav_curr_user"
+            android:title="Current user" />
+        <item
+            android:id="@+id/nav_logout"
+            android:title="@string/menu_logout" />
+    </group>
+</menu>

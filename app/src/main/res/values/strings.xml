@@ -1,0 +1,45 @@
+<resources>
+    <string name="api_key">yHmWlqkUVCrVl1faU8txHH7Ut9iZTkBskEHcL4Xl</string> <!--NASA API:this only to try the custom recyclerview-->
+    <string name="app_name">PocketDR</string>
+    <string name="med">Medicine </string>
+    <string name="input_med_name">Medicine Name?</string>
+    <string name="schedule">Schedule</string>
+    <string name="begin_dt">Begin Date</string>
+    <string name="end_dt">End Date</string>
+    <string-array name="alarms">
+        <item>Once a day</item>
+        <item>Twice a day</item>
+        <item>Three times a day</item>
+        <item>Four times a day</item>
+    </string-array>
+    <string name="reminders">Reminders</string>
+    <string name="input_time">Select Time</string>
+    <string name="input_days">Select Days</string>
+    <string name="everyDay">Every Day</string>
+    <string name="notes">Additional Notes</string>
+    <string name="notesDesc">Here you can add important data related to the medication, such as dosage, in take method...</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
+    <string name="notification_channel_description"></string>
+
+    <string name="credit">TAMa FIT</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+    <string name="menu_medicines">Medicines</string>
+    <string name="menu_addMed">Add Medicine</string>
+    <string name="menu_dependants">Dependants</string>
+    <string name="menu_addDependant">Add Dependant</string>
+    <string name="menu_logout">Logout</string>
+    <string name="person">Asdrubilino de Almeida</string>
+    //Buttons
+    <string name="sign_in_with_google_button">Sign in with Google</string>
+    <string name="dependant_s_name">Dependant\'s name</string>
+    <string name="name">Name</string>
+    <string name="dependant_s_email">Dependant\'s email</string>
+    <string name="email">Email</string>
+    <string name="account_password">Account password</string>
+    <string name="password">Password</string>
+    <string name="icon">icon</string>
+    <string name="specific_notes_relative_to_the_medication">Specific notes relative to the medication</string>
+</resources>

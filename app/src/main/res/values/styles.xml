@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Base Application Theme-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!--Customize your theme here-->
+    </style>
+
+    <style name="dateTimePicker" parent="Theme.AppCompat.Light.Dialog">
+        <item name="colorAccent">@color/dark_green</item>
+        <item name="colorPrimary">@color/white</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/pickerButtonStyle</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/pickerButtonStyle</item>
+    </style>
+
+    <style name="pickerButtonStyle" parent="Base.Widget.AppCompat.Button.Borderless">
+        <item name="android:textColor">@color/dark_green</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--Customize your theme here-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="LoginPage" parent="Theme.AppCompat.Light.NoActionBar">
+        <!--Customize your theme here-->
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+
+</resources>
